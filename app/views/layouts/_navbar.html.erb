@@ -15,10 +15,8 @@
           <% if logged_in? %>
             <li>
               <a href="#">
-                <%= link_to new_item_path do %>
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 アイテムを追加
-                <% end %>
                 </a>
             </li>
 
@@ -35,7 +33,9 @@
                   <%= link_to 'マイページ', user_path(current_user) %>
                 </li>
                 <li role="separator" class="divider"></li>
-                 <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+                <li>
+                  <a href="#">ログアウト</a>
+                </li>
               </ul>
             </li>
           <% else %>
